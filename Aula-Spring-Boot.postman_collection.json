@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "b00738f7-bb78-4ecf-8114-f1d167eb9df6",
+		"name": "Aula-Spring-Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27686555"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/api/cliente/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"cliente",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "incluir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"status\": \"A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/api/cliente/incluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"cliente",
+						"incluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alterar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste2 alterado\",\r\n    \"status\": \"I\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/api/cliente/alterar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"cliente",
+						"alterar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtZW1vcmEuY29tLmJyIiwiZXhwIjoxNjk1OTA3ODQyfQ._np3xMG-AXiLkd4iAf-1kQ3Y2WIrlAArqXlTmwAHPcF_C798a9cKTgCUKbS2qNTbKAb1NgvfnVNnjhLcYS-vxg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/api/cliente/deletar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"api",
+						"cliente",
+						"deletar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
